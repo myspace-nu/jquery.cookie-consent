@@ -1,6 +1,6 @@
 /*!
- * jQuery Cookie consent plugin 0.9
- * https://myspace.nu
+ * jQuery Cookie consent plugin 0.9.1
+ * https://github.com/myspace-nu
  *
  * Copyright 2017 Johan Johansson
  * Released under the MIT license
@@ -53,7 +53,7 @@
 		var elm =
 			(this.length)?
 				this:
-				$("<div>", { html:settings.message, style:"background-color:white;text-align:center;display:none;"+settings.style })
+				$("<div>", { html:settings.message, style:"background-color:white;color:#333;text-align:center;display:none;"+settings.style })
 				.append($("<button>",{
 					html:settings.consentMessage,
 					style:"background:#090;color:white;border:none;border-radius:0.2em;margin:0.5em;padding:0.2em 0.5em 0.2em 0.5em;"+settings.consentStyle,
@@ -68,7 +68,7 @@
 		elm.each(function() {
 			var thisElm = $(this);
 			$(this).prependTo($("body"));
-			$(this).find("button."+settings.acceptClass).click(function() {
+			$(this).find("."+settings.acceptClass).click(function() {
 				if(settings.storage==='local'){
 					localStorage.setItem("cookiesConsentDate", new Date().getTime());
 				} else if(settings.storage==='session') {

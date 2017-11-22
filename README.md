@@ -14,7 +14,7 @@ Create a consent request (displayed as a bar at the top of the page) - Bare mini
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-		  $.cookieConsent();
+			$.cookieConsent();
 		});
 	</script>
 
@@ -30,12 +30,22 @@ Or, create a consent request from your own markup
 		#cookieConsent{ background-color:white;text-align:center;display:none;position:fixed;z-index:65000;bottom:0px;width:100%;font-size:14px; }
 		#cookieConsent button.cookieAccept{ background:#090;color:white;border:none;border-radius:0.2em;margin:0.5em;padding:0.2em 0.5em 0.2em 0.5em;}
 	</style>
-	<div id="cookieConsent">Vi anv‰nder cookies. Om du forts‰tter anv‰nda vÂr webbplats inneb‰r det att du godk‰nner detta.<button class="cookieAccept">Jag fˆrstÂr</button></div>
+	<div id="cookieConsent">Vi anv√§nder cookies. Om du forts√§tter anv√§nda v√•r webbplats inneb√§r det att du godk√§nner detta.<button class="cookieAccept">Jag f√∂rst√•r</button></div>
 	
+Or, specify some of the available options
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#cookieConsent').cookieConsent({
+				message: 'This website uses cookies. By using this website you consent to our use of these cookies.'
+			});
+		});
+	</script>
+
 ## Options
 **message** - The consent message you want to show
 
-    closeButton: 'This website uses cookies. By using this website you consent to our use of these cookies.'
+    message: 'This website uses cookies. By using this website you consent to our use of these cookies.'
 	
 **style** - Optional style for the consent message
 
