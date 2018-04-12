@@ -1,5 +1,5 @@
 /*!
- * jQuery Cookie consent plugin 0.9.1
+ * jQuery Cookie consent plugin 0.9.2
  * https://github.com/myspace-nu
  *
  * Copyright 2017 Johan Johansson
@@ -75,7 +75,7 @@
 					sessionStorage.setItem("cookiesConsentDate", new Date().getTime());
 				} else {
 					$.cookie('cookiesConsentDate',new Date().getTime(),
-						{ expires: new Date(new Date().getTime()+(86400000*settings.consentTime))}
+						{ expires: new Date(new Date().getTime()+(86400000*settings.consentTime)), path:'/' }
 					);
 				}
 				thisElm.slideUp();
