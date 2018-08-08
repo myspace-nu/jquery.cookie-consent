@@ -1,0 +1,28 @@
+{
+  "name": "jquery.cookie-consent",
+  "version": "1.0.1",
+  "description": "A simple jQuery plugin for requesting consent for cookie usage",
+  "main": "dist/jquery.cookie-consent.min.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myspace-nu/jquery.cookie-consent.git"
+  },
+  "keywords": [
+    "cookie",
+    "consent",
+    "jquery",
+    "gdpr"
+  ],
+  "author": "Johan Johansson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myspace-nu/jquery.cookie-consent/issues"
+  },
+  "homepage": "https://github.com/myspace-nu/jquery.cookie-consent#readme"
+}
