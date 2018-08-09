@@ -1,13 +1,14 @@
 {
   "name": "jquery.cookie-consent",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A simple jQuery plugin for requesting consent for cookie usage",
   "main": "dist/jquery.cookie-consent.min.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt",
+    "prepublish": "grunt"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/myspace-nu/jquery.cookie-consent/issues"
   },
-  "homepage": "https://github.com/myspace-nu/jquery.cookie-consent#readme"
+  "homepage": "https://github.com/myspace-nu/jquery.cookie-consent#readme",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^3.4.0"
+  }
 }

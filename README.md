@@ -4,9 +4,17 @@ A simple jQuery plugin for requesting consent for cookie usage.
 
 ## Installation
 
-Include script *after* the jQuery library
+Using npm
 
-    <script src="/path/to/jquery.cookie-consent.min.js"></script>
+	npm install jquery.cookie-consent --save
+
+Using CDN
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery.cookie-consent/dist/jquery.cookie-consent.min.js"></script>
+
+Or manually by including the script *after* the jQuery library
+
+	<script src="/path/to/jquery.cookie-consent.min.js"></script>
 
 ## Usage
 

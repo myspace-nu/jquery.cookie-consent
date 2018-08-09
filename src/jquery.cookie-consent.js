@@ -1,5 +1,5 @@
 /*!
- * jQuery Cookie consent plugin 1.0.1
+ * jQuery Cookie consent plugin
  * https://github.com/myspace-nu
  *
  * Copyright 2017 Johan Johansson
