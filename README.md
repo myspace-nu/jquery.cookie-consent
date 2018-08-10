@@ -3,8 +3,12 @@
 A simple jQuery plugin for requesting consent for cookie usage.
 
 [![Build Status](https://travis-ci.org/myspace-nu/jquery.cookie-consent.svg?branch=master)](https://travis-ci.org/myspace-nu/jquery.cookie-consent)
+<<<<<<< HEAD
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/myspace-nu/jquery.cookie-consent/blob/master/LICENSE)
 ![NpmVersion](https://img.shields.io/npm/v/npm.svg)
+=======
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)]
+>>>>>>> parent of 08b3c19... Update documentation
 
 ## Installation
 
