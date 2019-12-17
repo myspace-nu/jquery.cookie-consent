@@ -84,6 +84,12 @@ Or, specify some of the available options
 
     consentTime: 365 // Hide it for 1 year
 
+**consentKey** - Cookie / storage item name for consent information 
+
+    consentKey: 'myItemName'
+
+*Default: cookiesConsentDate*
+
 **storage** - Where should we save the consent information?
 
     storage: "local" // cookie => cookie, local => localStorage, session => sessionStorate (not really useful...)
