@@ -39,17 +39,19 @@
 		  	onInit: function(){ },
 			onConsent: function(){ },
 		  	onTemplate: function(){ console.log(this) },
-		  	testing: false
+			testing: false,
+			consentKey: "cookiesConsentDate"
 		}, options);
+		console.log(settings.consentKey);
 		var language = window.navigator.userLanguage || window.navigator.language;
 		settings.storage =
 		  	(settings.storage==='local'&&typeof(Storage)!=="undefined")?'local':
 	  		(settings.storage==='session'&&typeof(Storage)!=="undefined")?'session':
 			'cookie';
 		var consentedDate =
-			(settings.storage==='local')?parseInt(localStorage.getItem("cookiesConsentDate")):
-			(settings.storage==='session')?parseInt(sessionStorage.getItem("cookiesConsentDate")):
-			parseInt($.cookie('cookiesConsentDate'));
+			(settings.storage==='local')?parseInt(localStorage.getItem(settings.consentKey)):
+			(settings.storage==='session')?parseInt(sessionStorage.getItem(settings.consentKey)):
+			parseInt($.cookie(settings.consentKey));
 		var elm =
 			(this.length)?
 				this:
@@ -70,11 +72,11 @@
 			$(this).prependTo($("body"));
 			$(this).find("."+settings.acceptClass).click(function() {
 				if(settings.storage==='local'){
-					localStorage.setItem("cookiesConsentDate", new Date().getTime());
+					localStorage.setItem(settings.consentKey, new Date().getTime());
 				} else if(settings.storage==='session') {
-					sessionStorage.setItem("cookiesConsentDate", new Date().getTime());
+					sessionStorage.setItem(settings.consentKey, new Date().getTime());
 				} else {
-					$.cookie('cookiesConsentDate',new Date().getTime(),
+					$.cookie(settings.consentKey,new Date().getTime(),
 						{ expires: new Date(new Date().getTime()+(86400000*settings.consentTime)), path:'/' }
 					);
 				}
