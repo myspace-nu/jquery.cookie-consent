@@ -42,7 +42,7 @@
 			testing: false,
 			consentKey: "cookiesConsentDate"
 		}, options);
-		settings.isGoogleBot = !!navigator.userAgent.match(/Chrome-Lighthouse|Page Speed|Headless|AppleWebKit/i);
+		settings.isGoogleBot = !!navigator.userAgent.match(/Chrome-Lighthouse|Page Speed|Headless/i);
 		// console.log(settings);
 		var language = window.navigator.userLanguage || window.navigator.language;
 		settings.storage =
@@ -62,7 +62,7 @@
 					style:"background:#090;color:white;border:none;border-radius:0.2em;margin:0.5em;padding:0.2em 0.5em 0.2em 0.5em;"+settings.consentStyle,
 		  			class:settings.acceptClass}))
 				.prependTo($("body"));
-	  	settings.onInit.call(elm);
+		settings.onInit.call(elm);
 		if(settings.isGoogleBot){
 			$(elm).hide(); // Don't display it for Google bots.
 		} else if(settings.testing || !consentedDate || consentedDate+(86400000*settings.consentTime) < new Date().getTime()){
