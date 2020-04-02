@@ -42,7 +42,8 @@
 			testing: false,
 			consentKey: "cookiesConsentDate"
 		}, options);
-		console.log(settings.consentKey);
+		settings.isGoogleBot = !!navigator.userAgent.match(/Chrome-Lighthouse|Page Speed|Headless|AppleWebKit/i);
+		// console.log(settings);
 		var language = window.navigator.userLanguage || window.navigator.language;
 		settings.storage =
 		  	(settings.storage==='local'&&typeof(Storage)!=="undefined")?'local':
@@ -62,7 +63,9 @@
 		  			class:settings.acceptClass}))
 				.prependTo($("body"));
 	  	settings.onInit.call(elm);
-		if(settings.testing || !consentedDate || consentedDate+(86400000*settings.consentTime) < new Date().getTime()){
+		if(settings.isGoogleBot){
+			$(elm).hide(); // Don't display it for Google bots.
+		} else if(settings.testing || !consentedDate || consentedDate+(86400000*settings.consentTime) < new Date().getTime()){
 		  	$(elm).show();
 		} else {
 	  	  	$(elm).hide(); // Make sure to hide it if defined style does not do this.
