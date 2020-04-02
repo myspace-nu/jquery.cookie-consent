@@ -1,6 +1,6 @@
 {
   "name": "jquery.cookie-consent",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A simple jQuery plugin for requesting consent for cookie usage",
   "main": "dist/jquery.cookie-consent.min.js",
   "directories": {
