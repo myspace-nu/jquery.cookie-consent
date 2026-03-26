@@ -1,5 +1,9 @@
 # jquery.cookie-consent
 
+> ⚠️ This project is no longer maintained.
+> 
+> It is archived and will not receive updates, bug fixes, or security patches.
+ 
 A simple jQuery plugin for requesting consent for cookie usage.
 
 [![Build Status](https://travis-ci.org/myspace-nu/jquery.cookie-consent.svg?branch=master)](https://travis-ci.org/myspace-nu/jquery.cookie-consent)
